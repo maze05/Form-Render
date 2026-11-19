@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <form action="https://teach-backend-fawn.vercel.app/api/product"
+          method="POST"
+          enctype="multipart/form-data">
+
+        <fieldset>
+            <legend>General Info</legend>
+
+            <div class="form-row">
+                <label for="itemName">Item Name</label>
+                <input type="text" id="itemName" name="itemName">
+            </div>
+
+            <div class="form-row">
+                <label for="itemDescription">Description</label>
+                <textarea id="itemDescription" name="itemDescription"></textarea>
+            </div>
+
+            <div class="form-row">
+                <label for="category">Category</label>
+                <select id="category" name="category">
+                    <option value="notSpecified">notSpecified</option>
+                    <option value="consumption">consumption</option>
+                    <option value="household">household</option>
+                    <option value="electronic">electronic</option>
+                    <option value="gadget">gadget</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Misc.</legend>
+
+            <div class="form-row">
+                <label for="inventoryAmount">Inventory Amount</label>
+                <input type="number" id="inventoryAmount" name="inventoryAmount">
+            </div>
+
+            <div class="form-row">
+                <label for="listPrice">List price</label>
+                <input type="number" id="listPrice" name="listPrice">
+            </div>
+
+            <div class="form-row">
+                <label>Available Stores</label>
+                <div class="options">
+                    <label><input type="checkbox" name="availableStore[]" value="Bangkok">Bangkok</label>
+                    <label><input type="checkbox" name="availableStore[]" value="Pattaya">Pattaya</label>
+                    <label><input type="checkbox" name="availableStore[]" value="Phuket">Phuket</label>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label>Status</label>
+                <div class="options">
+                    <label><input type="radio" name="status" value="Active">Active</label>
+                    <label><input type="radio" name="status" value="Inactive">Inactive</label>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Staff</legend>
+
+            <div class="form-row">
+                <label for="staffEmail">Staff Email</label>
+                <input type="email" id="staffEmail" name="staffEmail">
+            </div>
+        </fieldset>
+
+        <div class="submit-row">
+            <button type="submit">Submit Form</button>
+        </div>
+
+    </form>
+
+</body>
+</html>
